@@ -23,7 +23,8 @@ function App(){
         <div className="conatiner">
             <Routes>
            
-            <Route exact path='/' element={<>
+            <Route exact path='/' element={
+            <>
             <FeedbackForm />
             <FeedbackStats />
             <FeedBackList  />
@@ -36,6 +37,10 @@ function App(){
            <Route path='/post/*' element={<Post/>}/>
            
          </Routes>
+         <Card>
+    <NavLink to='/' activeClassName='active'>Home</NavLink>
+ <NavLink to='/about' activeClassName='active'>About</NavLink>
+  </Card>
             <AboutIconLink/>
         </div>
         </Router>
